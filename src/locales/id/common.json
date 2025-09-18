@@ -1,0 +1,217 @@
+{
+  "navigation": {
+    "companyName": "PT. PHILLIPPE SURYA PRATAMA",
+    "tagline": "Layanan Las & Valve Industri",
+    "home": "Beranda",
+    "about": "Tentang",
+    "certificates": "Sertifikat",
+    "services": "Layanan",
+    "products": "Produk",
+    "clients": "Klien",
+    "contact": "Kontak",
+    "contactUs": "Hubungi Kami"
+  },
+  "hero": {
+    "badge": "Dipercaya Sejak 2010",
+    "title": "Keunggulan Layanan Las & Perbaikan Valve Industri",
+    "subtitle": "Spesialis dalam Layanan Las Industri dan Perbaikan Valve. Layanan las & perbaikan valve terpercaya untuk industri berat – daya tahan yang tahan lama, keamanan, dan downtime minimal.",
+    "description": "Kami menyediakan layanan las dan perbaikan valve komprehensif dengan standar internasional, memastikan keandalan maksimal dan downtime minimal untuk operasi industri Anda.",
+    "cta": "Mulai",
+    "certificateBadges": {
+      "iso9001": "ISO 9001:2015",
+      "iso45001": "ISO 45001:2018",
+      "sbuJk": "Sertifikat SBU JK"
+    }
+  },
+  "about": {
+    "badge": "Tentang PSP",
+    "title": "Keunggulan dalam Layanan Industri",
+    "subtitle": "Dengan pengalaman lebih dari satu dekade, kami telah membangun diri sebagai mitra terpercaya dalam layanan las industri dan perbaikan valve.",
+    "description": "PT. Phillippe Surya Pratama telah melayani industri berat sejak 2010, menyediakan solusi las dan perbaikan valve yang andal yang memenuhi standar internasional.",
+    "values": {
+      "quality": {
+        "title": "Keunggulan Kualitas",
+        "description": "Kami mempertahankan standar tertinggi dalam semua layanan las dan perbaikan kami, memastikan hasil yang tahan lama."
+      },
+      "reliability": {
+        "title": "Layanan Andal",
+        "description": "Tim berpengalaman kami memberikan solusi yang konsisten dan dapat diandalkan yang meminimalkan downtime dan memaksimalkan efisiensi."
+      },
+      "innovation": {
+        "title": "Inovasi Berkelanjutan",
+        "description": "Kami terus meningkatkan teknik dan mengadopsi teknologi baru untuk memberikan solusi yang lebih baik."
+      }
+    }
+  },
+  "certificates": {
+    "badge": "Sertifikasi",
+    "title": "Standar & Sertifikasi Internasional",
+    "subtitle": "Sertifikasi kami menunjukkan komitmen kami terhadap kualitas, keselamatan, dan standar internasional dalam layanan industri.",
+    "description": "Kami memiliki berbagai sertifikasi internasional yang memastikan layanan kami memenuhi standar kualitas dan keselamatan tertinggi.",
+    "certificates": {
+      "iso9001": {
+        "title": "ISO 9001:2015",
+        "subtitle": "Sistem Manajemen Mutu",
+        "description": "Sistem manajemen mutu bersertifikat yang memastikan pengiriman layanan yang konsisten dan perbaikan berkelanjutan."
+      },
+      "iso45001": {
+        "title": "ISO 45001:2018",
+        "subtitle": "Kesehatan & Keselamatan Kerja",
+        "description": "Standar internasional untuk sistem manajemen kesehatan dan keselamatan kerja, memastikan kondisi kerja yang aman."
+      },
+      "sbuJk": {
+        "title": "Sertifikat SBU JK",
+        "subtitle": "Izin Usaha Jasa Konstruksi",
+        "description": "Sertifikasi resmi dari Badan Pengembangan Jasa Konstruksi Indonesia untuk layanan konstruksi."
+      },
+      "weldingService": {
+        "title": "Sertifikat Layanan Las",
+        "subtitle": "Layanan Las Profesional",
+        "description": "Layanan las bersertifikat yang memenuhi standar internasional untuk aplikasi industri."
+      }
+    },
+    "whyImportant": {
+      "title": "Mengapa Sertifikasi Penting",
+      "benefits": {
+        "quality": {
+          "title": "Jaminan Kualitas",
+          "description": "Sertifikasi menjamin bahwa layanan kami memenuhi standar kualitas internasional dan praktik terbaik."
+        },
+        "trust": {
+          "title": "Kepercayaan Klien",
+          "description": "Sertifikasi pihak ketiga membangun kepercayaan dan kepercayaan dengan klien dan mitra kami."
+        },
+        "compliance": {
+          "title": "Kepatuhan Regulasi",
+          "description": "Sertifikasi kami memastikan kepatuhan terhadap regulasi dan standar lokal dan internasional."
+        }
+      }
+    },
+    "viewPdf": "Lihat PDF",
+    "downloadPdf": "Unduh PDF"
+  },
+  "services": {
+    "badge": "Layanan Kami",
+    "title": "Solusi Industri Komprehensif",
+    "subtitle": "Kami menyediakan layanan las dan perbaikan valve khusus yang dirancang untuk aplikasi industri berat.",
+    "welding": {
+      "title": "Layanan Las",
+      "description": "Layanan las profesional untuk aplikasi industri termasuk las struktural, pipa, dan peralatan.",
+      "materials": "Material",
+      "applications": "Aplikasi",
+      "industries": "Industri"
+    },
+    "valveRepair": {
+      "title": "Layanan Perbaikan Valve",
+      "description": "Layanan perbaikan dan pemeliharaan valve lengkap termasuk pengujian, renovasi, dan optimasi kinerja.",
+      "process": "Proses",
+      "valveTypes": "Jenis Valve",
+      "standards": "Standar",
+      "industries": "Industri"
+    },
+    "cta": {
+      "title": "Butuh Layanan Industri Profesional?",
+      "description": "Hubungi kami untuk solusi las dan perbaikan valve yang andal yang memenuhi standar internasional.",
+      "button": "Dapatkan Penawaran"
+    }
+  },
+  "products": {
+    "badge": "Produk Kami",
+    "title": "Produk Industri Berkualitas",
+    "subtitle": "Kami mendistribusikan produk industri berkualitas tinggi dan material las dari produsen terpercaya.",
+    "description": "Portofolio produk kami meliputi consumable las, valve industri, dan peralatan khusus untuk berbagai aplikasi industri.",
+    "geka": {
+      "title": "Elektroda Las GEKA",
+      "description": "Elektroda las berkualitas tinggi untuk berbagai aplikasi industri dengan stabilitas busur dan kualitas las yang sangat baik."
+    },
+    "starlet": {
+      "title": "Produk Las Starlet",
+      "description": "Consumable las dan aksesori premium yang dirancang untuk aplikasi las profesional."
+    },
+    "weldingAlloys": {
+      "title": "Paduan Las & Consumable",
+      "description": "Rangkaian lengkap paduan las, fluks, dan consumable untuk semua jenis proses las."
+    },
+    "cta": {
+      "title": "Mencari Produk Berkualitas?",
+      "description": "Jelajahi rangkaian lengkap produk industri dan material las kami.",
+      "button": "Lihat Produk"
+    }
+  },
+  "clients": {
+    "badge": "Klien Kami",
+    "title": "Dipercaya oleh Industri Terkemuka",
+    "subtitle": "Kami melayani beragam klien di berbagai sektor industri dengan layanan yang andal.",
+    "description": "Basis klien kami termasuk perusahaan industri besar yang mempercayai kami untuk kebutuhan las dan perbaikan valve kritis mereka.",
+    "stats": {
+      "projects": "Proyek Selesai",
+      "clients": "Klien Puas",
+      "experience": "Tahun Pengalaman",
+      "satisfaction": "Kepuasan Klien"
+    },
+    "testimonials": {
+      "title": "Testimoni Klien",
+      "subtitle": "Apa yang dikatakan klien kami tentang layanan kami"
+    }
+  },
+  "contact": {
+    "badge": "Hubungi Kami",
+    "title": "Hubungi Kami",
+    "subtitle": "Siap mendiskusikan kebutuhan las industri dan perbaikan valve Anda?",
+    "description": "Hubungi kami untuk konsultasi profesional dan solusi layanan yang andal yang memenuhi kebutuhan industri Anda.",
+    "form": {
+      "name": "Nama Lengkap",
+      "namePlaceholder": "Masukkan nama lengkap Anda",
+      "email": "Alamat Email",
+      "emailPlaceholder": "Masukkan alamat email Anda",
+      "phone": "Nomor Telepon",
+      "phonePlaceholder": "Masukkan nomor telepon Anda",
+      "company": "Nama Perusahaan",
+      "companyPlaceholder": "Masukkan nama perusahaan Anda",
+      "service": "Layanan yang Dibutuhkan",
+      "selectService": "Pilih layanan",
+      "welding": "Layanan Las",
+      "valveRepair": "Layanan Perbaikan Valve",
+      "consultation": "Konsultasi Teknis",
+      "message": "Pesan",
+      "messagePlaceholder": "Jelaskan kebutuhan Anda",
+      "submit": "Kirim Pesan",
+      "success": "Pesan berhasil dikirim!",
+      "error": "Gagal mengirim pesan. Silakan coba lagi."
+    },
+    "info": {
+      "address": "Ruko Villa Taman Bandara Blok N8/15, Dadap, Kosambi, Tangerang",
+      "phone": "+62-21-22556661 (Marketing)",
+      "email": "psp_yanto@yahoo.com",
+      "hours": "Sen-Jum: 08:00 - 17:00"
+    }
+  },
+  "footer": {
+    "description": "Spesialis dalam Layanan Las Industri dan Perbaikan Valve. Layanan las & perbaikan valve terpercaya untuk industri berat – daya tahan yang tahan lama, keamanan, dan downtime minimal.",
+    "services": {
+      "title": "Layanan",
+      "welding": "Layanan Las",
+      "valveRepair": "Layanan Perbaikan Valve",
+      "products": "Produk via APW",
+      "consultation": "Konsultasi Teknis"
+    },
+    "quickLinks": {
+      "title": "Tautan Cepat",
+      "about": "Tentang Kami",
+      "clients": "Klien Kami",
+      "contact": "Kontak",
+      "products": "Produk"
+    },
+    "cta": {
+      "title": "Siap Mengurangi Downtime & Meningkatkan Keandalan Peralatan?",
+      "description": "Jangan tunggu sampai masalah produksi menghambat profit. Hubungi kami sekarang untuk solusi yang cepat, aman, dan berstandar internasional.",
+      "contactUs": "Hubungi Kami",
+      "callNow": "Telepon Sekarang"
+    },
+    "copyright": "PT. PHILLIPPE SURYA PRATAMA. Semua hak dilindungi.",
+    "tagline": {
+      "left": "Dipercaya sejak 2010",
+      "right": "Spesialis las & perbaikan valve"
+    }
+  }
+}

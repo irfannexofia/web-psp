@@ -5,11 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:multilang": "node scripts/build-multilang.js",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "serve": "npx serve out",
+    "preview": "npm run build:multilang && npm run serve"
   },
   "dependencies": {
     "@frostui/tailwindcss": "^0.1.5",
+    "@googlemaps/js-api-loader": "^1.16.10",
     "@iconify/react": "^5.0.2",
     "@tailwindcss/forms": "^0.5.9",
     "clsx": "^2.1.1",

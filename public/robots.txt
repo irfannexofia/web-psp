@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Disallow private areas
+Disallow: /private/
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://phillippesuryapratama.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

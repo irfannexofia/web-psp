@@ -1,0 +1,517 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "products": "Products",
+    "certificates": "Certificates",
+    "clients": "Clients",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Industrial Excellence",
+    "title": "Professional Welding & Valve Repair Services",
+    "subtitle": "PT. Phillippe Surya Pratama delivers reliable industrial solutions with skilled technicians and years of field experience. Supporting mining, oil & gas, manufacturing, and power generation sectors.",
+    "cta1": "Our Services",
+    "cta2": "View Products",
+    "description": "We provide:",
+    "services": "Comprehensive welding services and valve repair.",
+    "products": "High-quality welding alloys and equipment for professional use.",
+    "exploreServices": "Explore Services",
+    "getStarted": "Get Quote"
+  },
+  "about": {
+    "badge": "About PSP",
+    "title": "Your Trusted Industrial Partner",
+    "subtitle": "PT. Phillippe Surya Pratama is a service-focused company specializing in industrial welding and valve repair with a commitment to excellence and reliability.",
+    "description": "With a team of skilled technicians and years of field experience, we deliver reliable solutions to support the operational needs of various industrial sectors.",
+    "vision": {
+      "title": "Vision",
+      "description": "To become the leading provider of industrial welding and valve repair services, recognized for our technical expertise, quality workmanship, and commitment to customer satisfaction."
+    },
+    "mission": {
+      "title": "Mission",
+      "items": "Deliver Excellence: Provide high-quality welding and valve repair services that meet international standards.\nEnsure Reliability: Maintain consistent performance and reliability in all our industrial solutions.\nSupport Industry: Contribute to the success of mining, oil & gas, manufacturing, and power generation sectors through our specialized services."
+    },
+    "values": {
+      "title": "Why Choose PSP?",
+      "expertise": {
+        "title": "Technical Expertise",
+        "description": "Our team consists of certified technicians with extensive experience in industrial welding and valve repair applications."
+      },
+      "quality": {
+        "title": "Quality Assurance",
+        "description": "We maintain strict quality standards and use premium materials to ensure long-lasting results for all our services."
+      },
+      "reliability": {
+        "title": "Reliable Service",
+        "description": "We understand the critical nature of industrial operations and provide dependable solutions that minimize downtime."
+      }
+    },
+    "stats": {
+      "projects": "Projects Completed",
+      "satisfaction": "Client Satisfaction",
+      "support": "Support Available",
+      "experience": "Years Experience"
+    },
+    "impact": {
+      "title": "Our Impact",
+      "description": "Numbers that speak for our commitment to industrial excellence"
+    },
+    "philosophy": {
+      "title": "Industrial Excellence",
+      "description": "We believe that proper industrial maintenance and repair services are essential for operational efficiency and safety. Our commitment to excellence ensures that every project we undertake meets the highest standards of quality and reliability."
+    },
+    "exploreServices": "Explore Our Services",
+    "startJourney": "Start Your Project",
+    "locations": {
+      "mainOffice": {
+        "title": "Main Office",
+        "address": "Ruko Villa Taman Bandara Blok N8/15, Dadap, Kosambi, Tangerang.",
+        "hours": "(Mon–Fri, 08.00–16.00)"
+      },
+      "workshop": {
+        "title": "Workshop",
+        "address": "Pergudangan 99 Blok Q/33, Kosambi, Tangerang."
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Two Premier Services That Form the Foundation of PSP's Reputation",
+    "description": "We offer two premier services that form the foundation of PSP's reputation: Welding Service and Valve Repair Service.",
+    "welding": {
+      "title": "1) Welding Service",
+      "subtitle": "Expert Industrial Welding for Equipment Repair & Fabrication",
+      "description": "Handling crack repair, reinforcement, build-up worn parts, and custom fabrication.",
+      "methods": "Methods",
+      "materials": "Materials",
+      "applications": "Applications",
+      "industries": "Industries",
+      "methodsList": [
+        "SMAW",
+        "GTAW (TIG)",
+        "FCAW",
+        "GMAW (MIG)",
+        "Hardfacing & Overlay"
+      ],
+      "materialsList": [
+        "Carbon steel",
+        "Stainless",
+        "Alloy",
+        "Cast iron",
+        "Non-ferrous"
+      ],
+      "applicationsList": [
+        "Tank & vessel repair",
+        "Structural reinforcement",
+        "Custom metal fabrication"
+      ],
+      "industriesList": [
+        "Mining",
+        "Oil & Gas",
+        "Power",
+        "Cement",
+        "Steel",
+        "Petrochemical",
+        "Manufacturing"
+      ]
+    },
+    "valve": {
+      "title": "2) Valve Repair Service",
+      "subtitle": "Comprehensive Valve Repair, Reconditioning & Testing",
+      "description": "Service stages: inspection & diagnostic, disassembly & cleaning, component repair or replacement, lapping & machining, reassembly & calibration, hydrostatic/pneumatic pressure testing, ending with final quality check & reporting.",
+      "process": "Service Process",
+      "types": "Valve Types",
+      "standards": "Standards",
+      "industries": "Industries",
+      "processList": [
+        "Inspection & Diagnostic",
+        "Disassembly & Cleaning",
+        "Component Repair or Replacement",
+        "Lapping & Machining",
+        "Reassembly & Calibration",
+        "Hydrostatic/Pneumatic Testing",
+        "Final Quality Check & Reporting"
+      ],
+      "typesList": [
+        "Gate",
+        "Globe",
+        "Ball",
+        "Check",
+        "Butterfly",
+        "Relief",
+        "Control"
+      ],
+      "standardsList": ["API", "ASME", "ANSI", "OEM"],
+      "industriesList": [
+        "Oil & Gas",
+        "Petrochemical",
+        "Power Plant",
+        "Water Treatment",
+        "Pulp & Paper",
+        "Chemical",
+        "Food & Beverage"
+      ]
+    },
+    "cta": {
+      "title": "Ready to Reduce Downtime & Increase Equipment Reliability?",
+      "description": "Don't wait until production problems hinder profit. Contact us now for fast, safe, and internationally standardized solutions.",
+      "contact": "Contact Us",
+      "viewProducts": "View Products"
+    },
+    "getStarted": "Get Started",
+    "technologiesUsed": "Technologies Used",
+    "keyFeatures": "Key Features"
+  },
+  "products": {
+    "title": "Products (via APW)",
+    "subtitle": "Product Supply through PT. Anugerah Panca Wisesa (APW)",
+    "description": "As a supporter of smooth operations, PSP collaborates with APW to provide industrial products from trusted brands.",
+    "starlet": {
+      "name": "Starlet",
+      "type": "Welding electrodes & wires",
+      "description": "Stable arc, neat bead, easy slag removal. Suitable for general fabrication & routine repairs.",
+      "features": [
+        "Stable arc",
+        "Neat bead",
+        "Easy slag removal",
+        "Suitable for general fabrication",
+        "Routine repairs"
+      ]
+    },
+    "geka": {
+      "name": "GEKA",
+      "type": "Valves, welding electrodes & machines",
+      "description": "Competitive & reliable for both project-based and daily needs.",
+      "features": [
+        "Competitive & reliable",
+        "Project-based solutions",
+        "Daily needs",
+        "Valves & welding equipment",
+        "Quality assurance"
+      ]
+    },
+    "weldingAlloys": {
+      "name": "Welding Alloys",
+      "type": "Hardfacing & cladding",
+      "description": "Wear & corrosion resistant for heavy-duty applications.",
+      "features": [
+        "Wear resistant",
+        "Anti corrosion",
+        "Heavy-duty applications",
+        "Hardfacing solutions",
+        "Cladding technology"
+      ]
+    },
+    "features": "Features",
+    "inquireNow": "Inquire Now",
+    "howToPurchase": {
+      "title": "How to Purchase",
+      "description": "All inquiries are directed to APW; PSP team helps with technical recommendations to ensure product specifications meet requirements.",
+      "getRecommendation": "Get Technical Recommendation",
+      "callDirectly": "Call APW Directly"
+    },
+    "gallery": {
+      "title": "Product Gallery",
+      "description": "Visual collage of brands & products distributed through APW. Shows variety of consumables (electrodes, wires, rods), valves, and welding machines.",
+      "moreProducts": "More Products"
+    }
+  },
+  "certificates": {
+    "title": "Certifications",
+    "subtitle": "Our commitment to quality and international standards",
+    "description": "PSP has official certifications that prove our commitment to quality, safety, and international industry standards.",
+    "iso9001": {
+      "title": "ISO 9001:2015",
+      "description": "Quality Management System certification ensuring consistent quality in all our services."
+    },
+    "iso45001": {
+      "title": "ISO 45001:2018",
+      "description": "Occupational Health and Safety Management System certification for workplace safety."
+    },
+    "sbu": {
+      "title": "SBUJK Certificate",
+      "description": "Construction Business Entity Certificate for professional construction services."
+    },
+    "ss": {
+      "title": "SS Certificate",
+      "description": "Safety and Security certification for industrial operations."
+    },
+    "viewCertificate": "View Certificate",
+    "downloadCertificate": "Download Certificate",
+    "whyImportant": {
+      "title": "Why Certifications Matter?",
+      "description": "International certifications ensure consistent standards of quality, safety, and professionalism in every project we undertake.",
+      "quality": {
+        "title": "Guaranteed Quality",
+        "description": "ISO 9001 ensures consistent and sustainable work processes"
+      },
+      "safety": {
+        "title": "Safety Priority",
+        "description": "ISO 45001 guarantees a safe and healthy work environment"
+      },
+      "competence": {
+        "title": "Verified Competence",
+        "description": "SBU JK and special certificates prove our technical expertise"
+      }
+    },
+    "modal": {
+      "viewPdf": "View PDF",
+      "downloadPdf": "Download PDF",
+      "back": "Back",
+      "description": "Official certificate available in PDF format. Click the button below to view or download the certificate."
+    }
+  },
+  "clients": {
+    "title": "Our Clients",
+    "subtitle": "Our Clients Who Trust PSP",
+    "description": "Displaying a concise list of clients with mini-project descriptions for context. Use logo/grayscale grid for visual consistency.",
+    "clientList": {
+      "wilmar": {
+        "name": "PT. Wilmar Nabati",
+        "sector": "Agribusiness",
+        "project": "Ducting fabrication & installation",
+        "description": "Professional ducting fabrication and installation services for industrial facilities."
+      },
+      "petrokimia": {
+        "name": "PT. Petrokimia Gresik",
+        "sector": "Petrochemical",
+        "project": "Scrubber Venturi Tank work",
+        "description": "Specialized welding and repair work on critical petrochemical equipment."
+      },
+      "pjb": {
+        "name": "PT. PJB Jepara",
+        "sector": "Power Generation",
+        "project": "Trass Silo maintenance",
+        "description": "Ongoing maintenance services for power plant silo systems to ensure operational continuity."
+      }
+    },
+    "project": "Project",
+    "impact": {
+      "title": "Our Client Impact",
+      "description": "Numbers that prove our commitment to excellence",
+      "stats": {
+        "projects": {
+          "number": "100+",
+          "label": "Projects Completed",
+          "description": "Successfully delivered industrial projects across various sectors"
+        },
+        "clients": {
+          "number": "50+",
+          "label": "Happy Clients",
+          "description": "Long-term partnerships with satisfied industrial clients"
+        },
+        "experience": {
+          "number": "13+",
+          "label": "Years Experience",
+          "description": "Over a decade of expertise in industrial welding and valve repair"
+        },
+        "support": {
+          "number": "24/7",
+          "label": "Support Available",
+          "description": "Round-the-clock technical support for critical operations"
+        }
+      }
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "description": "What clients say about PSP services",
+      "wilmar": {
+        "quote": "PSP provides very professional welding services. Their team is very experienced and the work results meet international standards.",
+        "author": "PT. Wilmar Nabati"
+      },
+      "petrokimia": {
+        "quote": "PSP's valve repair service is very satisfying. They were able to complete repairs quickly and with high quality.",
+        "author": "PT. Petrokimia Gresik"
+      },
+      "pjb": {
+        "quote": "The maintenance service provided by PSP is very reliable. They ensure our operations run smoothly without significant downtime.",
+        "author": "PT. PJB Jepara"
+      }
+    },
+    "cta": {
+      "title": "Join Our Clients",
+      "description": "Get the best welding and valve repair services for your industry. PSP team is ready to be your trusted partner in maintaining your operational reliability.",
+      "contact": "Contact Us Now",
+      "viewServices": "View Our Services"
+    }
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact Us for the Best Solutions",
+    "description": "We believe that easy communication is the beginning of successful cooperation. Our team will contact you within 1-2 business days.",
+    "map": {
+      "title": "Our Location",
+      "description": "Find us easily with our interactive map",
+      "companyName": "PT. Phillippe Surya Pratama",
+      "companyTagline": "Industrial Welding & Valve Repair",
+      "address": "Ruko Villa Taman Bandara Blok N8/15",
+      "area": "Dadap, Kosambi, Tangerang",
+      "hours": "Mon-Fri, 08:00-16:00"
+    },
+    "address": {
+      "title": "Address",
+      "mainOffice": {
+        "title": "Main Office",
+        "address": "Jl. Raya Prancis, Ruko Villa Taman Bandara Blok N8/15, Kel. Dadap, Kec. Kosambi, Tangerang 15211 – Indonesia",
+        "hours": "(Mon–Fri, 08.00–16.00)"
+      },
+      "workshop": {
+        "title": "Workshop",
+        "address": "Pergudangan 99 Blok Q/33, Kosambi, Tangerang"
+      }
+    },
+    "phone": {
+      "title": "Phone",
+      "marketing": {
+        "label": "Marketing",
+        "number": "+62-21-22556661 (ext. Marketing)"
+      },
+      "direct": {
+        "label": "Direct",
+        "number": "+62-21-92112111"
+      },
+      "purchasing": {
+        "label": "Purchasing Dept.",
+        "number": "+62-21-22556662 (ext. Purchasing Dept.)"
+      },
+      "financial": {
+        "label": "Financial Dept.",
+        "number": "+62-21-22556663 (ext. Financial Dept.)"
+      },
+      "fax": {
+        "label": "Fax",
+        "number": "+62-21-22556660"
+      }
+    },
+    "email": {
+      "title": "Email",
+      "general": {
+        "label": "General Inquiry",
+        "address": "psp_yanto@yahoo.com"
+      },
+      "product": {
+        "label": "Product Inquiry",
+        "address": "psp_starlet@yahoo.com"
+      },
+      "technical": {
+        "label": "Technical Support",
+        "address": "okon.suprianto@psp-indo.co.id"
+      }
+    },
+    "form": {
+      "title": "Quick Form",
+      "successMessage": "Thank you! We will contact you soon.",
+      "errorMessage": "An error occurred. Please try again.",
+      "fields": {
+        "name": {
+          "label": "Full Name *",
+          "placeholder": "Your full name"
+        },
+        "email": {
+          "label": "Email *",
+          "placeholder": "your.email@example.com"
+        },
+        "phone": {
+          "label": "Phone Number",
+          "placeholder": "+62-xxx-xxxx-xxxx"
+        },
+        "company": {
+          "label": "Company Name",
+          "placeholder": "Your company name"
+        },
+        "service": {
+          "label": "Select Service",
+          "placeholder": "Select service",
+          "options": {
+            "welding": "Welding Service",
+            "valve": "Valve Repair Service",
+            "products": "Products via APW",
+            "consultation": "Consultation"
+          }
+        },
+        "message": {
+          "label": "Message *",
+          "placeholder": "Tell us about your needs..."
+        }
+      },
+      "submit": {
+        "sending": "Sending...",
+        "send": "Send Message"
+      },
+      "whatsapp": "WhatsApp",
+      "note": "We usually respond within 24 hours. For urgent questions, please contact us directly via WhatsApp or phone."
+    },
+    "cta": {
+      "title": "Ready to Reduce Downtime & Increase Equipment Reliability?",
+      "description": "Don't wait until production problems hinder profit. Contact us now for fast, safe, and internationally standardized solutions.",
+      "learnMore": "Learn More",
+      "contactUs": "Contact Us"
+    }
+  },
+  "footer": {
+    "company": {
+      "name": "PT. PHILLIPPE SURYA PRATAMA",
+      "tagline": "Industrial Welding & Valve Services",
+      "description": "Specialist in Industrial Welding and Valve Repair Service. Trusted welding & valve repair services for heavy industries – enduring durability, safety, and minimal downtime.",
+      "address": "Ruko Villa Taman Bandara Blok N8/15, Dadap, Kosambi, Tangerang",
+      "phone": "+62-21-22556661 (Marketing)",
+      "email": "psp_yanto@yahoo.com"
+    },
+    "services": {
+      "title": "Services",
+      "welding": "Welding Service",
+      "valve": "Valve Repair Service",
+      "products": "Products via APW",
+      "consultation": "Technical Consultation"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "clients": "Our Clients",
+      "contact": "Contact",
+      "products": "Products"
+    },
+    "cta": {
+      "title": "Ready to Reduce Downtime & Increase Equipment Reliability?",
+      "description": "Don't wait until production problems hinder profit. Contact us now for fast, safe, and internationally standardized solutions.",
+      "contactUs": "Contact Us",
+      "callNow": "Call Now"
+    },
+    "copyright": {
+      "text": "PT. Phillippe Surya Pratama. All rights reserved.",
+      "experience": "Experienced since 2010",
+      "specialty": "Specialist in welding & valve repair"
+    }
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "subtitle": "404 Error",
+      "description": "The page you are looking for doesn't exist or has been moved.",
+      "message": "We're sorry, but the page you requested could not be found. It may have been moved, deleted, or the URL might be incorrect.",
+      "suggestions": "Here are some suggestions:",
+      "suggestion1": "Check the URL for typos",
+      "suggestion2": "Go back to the previous page",
+      "suggestion3": "Visit our homepage",
+      "suggestion4": "Contact us for assistance",
+      "backHome": "Back to Home",
+      "contactUs": "Contact Us"
+    },
+    "500": {
+      "title": "Internal Server Error",
+      "subtitle": "500 Error",
+      "description": "Something went wrong on our end. We're working to fix it.",
+      "message": "We apologize for the inconvenience. Our technical team has been notified and is working to resolve this issue.",
+      "suggestions": "In the meantime, you can:",
+      "suggestion1": "Try refreshing the page",
+      "suggestion2": "Go back to the previous page",
+      "suggestion3": "Visit our homepage",
+      "suggestion4": "Contact us if the problem persists",
+      "backHome": "Back to Home",
+      "contactUs": "Contact Us",
+      "tryAgain": "Try Again"
+    }
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "navigation": {
+    "companyName": "PT. PHILLIPPE SURYA PRATAMA",
+    "tagline": "Industrial Welding & Valve Services",
+    "home": "Home",
+    "about": "About",
+    "certificates": "Certificates",
+    "services": "Services",
+    "products": "Products",
+    "clients": "Clients",
+    "contact": "Contact",
+    "contactUs": "Contact Us"
+  },
+  "hero": {
+    "badge": "Trusted Since 2010",
+    "title": "Industrial Welding & Valve Repair Excellence",
+    "subtitle": "Specialist in Industrial Welding and Valve Repair Service. Trusted welding & valve repair services for heavy industries – enduring durability, safety, and minimal downtime.",
+    "description": "We provide comprehensive welding and valve repair services with international standards, ensuring maximum reliability and minimal downtime for your industrial operations.",
+    "cta": "Get Started",
+    "certificateBadges": {
+      "iso9001": "ISO 9001:2015",
+      "iso45001": "ISO 45001:2018",
+      "sbuJk": "SBU JK Certified"
+    }
+  },
+  "about": {
+    "badge": "About PSP",
+    "title": "Excellence in Industrial Services",
+    "subtitle": "With over a decade of experience, we have established ourselves as a trusted partner in industrial welding and valve repair services.",
+    "description": "PT. Phillippe Surya Pratama has been serving heavy industries since 2010, providing reliable welding and valve repair solutions that meet international standards.",
+    "values": {
+      "quality": {
+        "title": "Quality Excellence",
+        "description": "We maintain the highest standards in all our welding and repair services, ensuring long-lasting results."
+      },
+      "reliability": {
+        "title": "Reliable Service",
+        "description": "Our experienced team delivers consistent, dependable solutions that minimize downtime and maximize efficiency."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "We continuously improve our techniques and adopt new technologies to provide better solutions."
+      }
+    }
+  },
+  "certificates": {
+    "badge": "Certifications",
+    "title": "International Standards & Certifications",
+    "subtitle": "Our certifications demonstrate our commitment to quality, safety, and international standards in industrial services.",
+    "description": "We hold various international certifications that ensure our services meet the highest standards of quality and safety.",
+    "certificates": {
+      "iso9001": {
+        "title": "ISO 9001:2015",
+        "subtitle": "Quality Management System",
+        "description": "Certified quality management system ensuring consistent service delivery and continuous improvement."
+      },
+      "iso45001": {
+        "title": "ISO 45001:2018",
+        "subtitle": "Occupational Health & Safety",
+        "description": "International standard for occupational health and safety management systems, ensuring safe working conditions."
+      },
+      "sbuJk": {
+        "title": "SBU JK Certification",
+        "subtitle": "Construction Business License",
+        "description": "Official certification from the Indonesian Construction Services Development Board for construction services."
+      },
+      "weldingService": {
+        "title": "Welding Service Certificate",
+        "subtitle": "Professional Welding Services",
+        "description": "Certified welding services meeting international standards for industrial applications."
+      }
+    },
+    "whyImportant": {
+      "title": "Why Certifications Matter",
+      "benefits": {
+        "quality": {
+          "title": "Quality Assurance",
+          "description": "Certifications guarantee that our services meet international quality standards and best practices."
+        },
+        "trust": {
+          "title": "Client Trust",
+          "description": "Third-party certifications build confidence and trust with our clients and partners."
+        },
+        "compliance": {
+          "title": "Regulatory Compliance",
+          "description": "Our certifications ensure compliance with local and international regulations and standards."
+        }
+      }
+    },
+    "viewPdf": "View PDF",
+    "downloadPdf": "Download PDF"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "Comprehensive Industrial Solutions",
+    "subtitle": "We provide specialized welding and valve repair services designed for heavy industrial applications.",
+    "welding": {
+      "title": "Welding Services",
+      "description": "Professional welding services for industrial applications including structural, pipeline, and equipment welding.",
+      "materials": "Materials",
+      "applications": "Applications",
+      "industries": "Industries"
+    },
+    "valveRepair": {
+      "title": "Valve Repair Services",
+      "description": "Complete valve repair and maintenance services including testing, refurbishment, and performance optimization.",
+      "process": "Process",
+      "valveTypes": "Valve Types",
+      "standards": "Standards",
+      "industries": "Industries"
+    },
+    "cta": {
+      "title": "Need Professional Industrial Services?",
+      "description": "Contact us for reliable welding and valve repair solutions that meet international standards.",
+      "button": "Get Quote"
+    }
+  },
+  "products": {
+    "badge": "Our Products",
+    "title": "Quality Industrial Products",
+    "subtitle": "We distribute high-quality industrial products and welding materials from trusted manufacturers.",
+    "description": "Our product portfolio includes welding consumables, industrial valves, and specialized equipment for various industrial applications.",
+    "geka": {
+      "title": "GEKA Welding Electrodes",
+      "description": "High-quality welding electrodes for various industrial applications with excellent arc stability and weld quality."
+    },
+    "starlet": {
+      "title": "Starlet Welding Products",
+      "description": "Premium welding consumables and accessories designed for professional welding applications."
+    },
+    "weldingAlloys": {
+      "title": "Welding Alloys & Consumables",
+      "description": "Complete range of welding alloys, fluxes, and consumables for all types of welding processes."
+    },
+    "cta": {
+      "title": "Looking for Quality Products?",
+      "description": "Browse our comprehensive range of industrial products and welding materials.",
+      "button": "View Products"
+    }
+  },
+  "clients": {
+    "badge": "Our Clients",
+    "title": "Trusted by Leading Industries",
+    "subtitle": "We serve a diverse range of clients across various industrial sectors with our reliable services.",
+    "description": "Our client base includes major industrial companies that trust us for their critical welding and valve repair needs.",
+    "stats": {
+      "projects": "Projects Completed",
+      "clients": "Satisfied Clients",
+      "experience": "Years of Experience",
+      "satisfaction": "Client Satisfaction"
+    },
+    "testimonials": {
+      "title": "Client Testimonials",
+      "subtitle": "What our clients say about our services"
+    }
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Get in Touch",
+    "subtitle": "Ready to discuss your industrial welding and valve repair needs?",
+    "description": "Contact us for professional consultation and reliable service solutions that meet your industrial requirements.",
+    "form": {
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number",
+      "phonePlaceholder": "Enter your phone number",
+      "company": "Company Name",
+      "companyPlaceholder": "Enter your company name",
+      "service": "Service Needed",
+      "selectService": "Select a service",
+      "welding": "Welding Services",
+      "valveRepair": "Valve Repair Services",
+      "consultation": "Technical Consultation",
+      "message": "Message",
+      "messagePlaceholder": "Describe your requirements",
+      "submit": "Send Message",
+      "success": "Message sent successfully!",
+      "error": "Failed to send message. Please try again."
+    },
+    "info": {
+      "address": "Ruko Villa Taman Bandara Blok N8/15, Dadap, Kosambi, Tangerang",
+      "phone": "+62-21-22556661 (Marketing)",
+      "email": "psp_yanto@yahoo.com",
+      "hours": "Mon-Fri: 8:00 AM - 5:00 PM"
+    }
+  },
+  "footer": {
+    "description": "Specialist in Industrial Welding and Valve Repair Service. Trusted welding & valve repair services for heavy industries – enduring durability, safety, and minimal downtime.",
+    "services": {
+      "title": "Services",
+      "welding": "Welding Service",
+      "valveRepair": "Valve Repair Service",
+      "products": "Products via APW",
+      "consultation": "Technical Consultation"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About Us",
+      "clients": "Our Clients",
+      "contact": "Contact",
+      "products": "Products"
+    },
+    "cta": {
+      "title": "Ready to Reduce Downtime & Improve Equipment Reliability?",
+      "description": "Don't wait for production problems to impact your profits. Contact us now for fast, safe, and internationally standardized solutions.",
+      "contactUs": "Contact Us",
+      "callNow": "Call Now"
+    },
+    "copyright": "PT. PHILLIPPE SURYA PRATAMA. All rights reserved.",
+    "tagline": {
+      "left": "Trusted since 2010",
+      "right": "Specialist welding & valve repair"
+    }
+  }
+}
