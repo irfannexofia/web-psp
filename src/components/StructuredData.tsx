@@ -23,7 +23,10 @@ export default function StructuredData({ locale }: StructuredDataProps) {
       streetAddress: "Ruko Villa Taman Bandara Blok N8/15, Dadap, Kosambi",
       addressLocality: "Tangerang",
       addressRegion: "Banten",
-      addressCountry: "ID",
+      addressCountry: {
+        "@type": "Country",
+        name: "Indonesia",
+      },
       postalCode: "15211",
     },
     contactPoint: [
@@ -44,7 +47,6 @@ export default function StructuredData({ locale }: StructuredDataProps) {
     ],
     foundingDate: "2010",
     numberOfEmployees: "10-50",
-    industry: "Industrial Services",
     sameAs: [],
     makesOffer: [
       {
@@ -65,10 +67,6 @@ export default function StructuredData({ locale }: StructuredDataProps) {
           },
         },
         areaServed: "Indonesia",
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceUrl: "https://phillippesuryapratama.com/#services",
-        },
       },
       {
         "@type": "Offer",
@@ -88,10 +86,6 @@ export default function StructuredData({ locale }: StructuredDataProps) {
           },
         },
         areaServed: "Indonesia",
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceUrl: "https://phillippesuryapratama.com/#services",
-        },
       },
       {
         "@type": "Offer",
@@ -108,10 +102,6 @@ export default function StructuredData({ locale }: StructuredDataProps) {
           },
         },
         areaServed: "Indonesia",
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceUrl: "https://phillippesuryapratama.com/#products",
-        },
       },
       {
         "@type": "Offer",
@@ -128,10 +118,6 @@ export default function StructuredData({ locale }: StructuredDataProps) {
           },
         },
         areaServed: "Indonesia",
-        availableChannel: {
-          "@type": "ServiceChannel",
-          serviceUrl: "https://phillippesuryapratama.com/#products",
-        },
       },
     ],
     hasCredential: [
@@ -206,7 +192,10 @@ export default function StructuredData({ locale }: StructuredDataProps) {
       streetAddress: "Ruko Villa Taman Bandara Blok N8/15, Dadap, Kosambi",
       addressLocality: "Tangerang",
       addressRegion: "Banten",
-      addressCountry: "ID",
+      addressCountry: {
+        "@type": "Country",
+        name: "Indonesia",
+      },
       postalCode: "15211",
     },
     geo: {

@@ -41,7 +41,7 @@ if (!fs.existsSync(outDir)) {
 
 // Validate static export structure
 console.log("📋 Validating static export structure...");
-const expectedFiles = ["404.html"];
+const expectedFiles = ["404.html", "500.html"];
 const expectedDirs = ["en", "id"];
 
 const missingFiles = expectedFiles.filter(
@@ -104,7 +104,7 @@ if (fs.existsSync(manifestIdPath)) {
 console.log("🖼️  Ensuring logo files exist...");
 const logoPath = path.join(
   process.cwd(),
-  "public",
+  "src",
   "assets",
   "images",
   "logo-navbar.svg"
@@ -116,32 +116,23 @@ if (fs.existsSync(logoPath) && !fs.existsSync(publicLogoPath)) {
   console.log("✅ Logo copied to public folder");
 }
 
-// Copy hero section image
-const heroImagePath = path.join(process.cwd(), "public", "hero-section.png");
-const outHeroImagePath = path.join(outDir, "hero-section.png");
+// Copy certificates to public folder if they exist
+console.log("📄 Copying certificates...");
+const certSourceDir = path.join(process.cwd(), "src", "docs", "certificate");
+const certDestDir = path.join(process.cwd(), "public", "certificates");
 
-if (fs.existsSync(heroImagePath)) {
-  fs.copyFileSync(heroImagePath, outHeroImagePath);
-  console.log("✅ Hero section image copied");
-}
-
-// Copy certificate files
-console.log("📄 Copying certificate files...");
-const certDir = path.join(process.cwd(), "public", "certificates");
-const outCertDir = path.join(outDir, "certificates");
-
-if (fs.existsSync(certDir)) {
-  if (!fs.existsSync(outCertDir)) {
-    fs.mkdirSync(outCertDir, { recursive: true });
+if (fs.existsSync(certSourceDir)) {
+  if (!fs.existsSync(certDestDir)) {
+    fs.mkdirSync(certDestDir, { recursive: true });
   }
 
-  const certFiles = fs.readdirSync(certDir);
+  const certFiles = fs.readdirSync(certSourceDir);
   certFiles.forEach((file) => {
-    const srcPath = path.join(certDir, file);
-    const destPath = path.join(outCertDir, file);
-    fs.copyFileSync(srcPath, destPath);
+    const sourcePath = path.join(certSourceDir, file);
+    const destPath = path.join(certDestDir, file);
+    fs.copyFileSync(sourcePath, destPath);
   });
-  console.log(`✅ ${certFiles.length} certificate files copied`);
+  console.log(`✅ ${certFiles.length} certificates copied`);
 }
 
 // Validate sitemap
@@ -182,7 +173,7 @@ console.log("✅ Next.js static export completed");
 console.log("✅ Multi-language metadata configured");
 console.log("✅ SEO optimizations applied");
 console.log("✅ Language-specific files copied");
-console.log("✅ Certificate files copied");
+console.log("✅ Error pages (404/500) included");
 console.log("\n🌐 Language Support:");
 console.log("- English (default): /");
 console.log("- Indonesian: /id/");
@@ -195,4 +186,4 @@ console.log("1. Test the build locally: npx serve out");
 console.log("2. Deploy to server: npm run deploy");
 console.log("3. Verify SEO metadata in browser dev tools");
 console.log("4. Test both language versions");
-console.log("5. Verify certificate downloads work correctly");
+console.log("5. Test error pages (404/500)");

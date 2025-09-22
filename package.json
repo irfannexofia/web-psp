@@ -9,7 +9,9 @@
     "start": "next start",
     "lint": "next lint",
     "serve": "npx serve out",
-    "preview": "npm run build:multilang && npm run serve"
+    "preview": "npm run build:multilang && npm run serve",
+    "deploy:dev": "./scripts/deploy-dev-simple.sh",
+    "deploy": "npm run build:multilang && npm run deploy:dev"
   },
   "dependencies": {
     "@frostui/tailwindcss": "^0.1.5",

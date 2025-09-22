@@ -1,114 +1,174 @@
-# Build Scripts for PT. Phillippe Surya Pratama
+# Deployment Scripts for PT. Phillippe Surya Pratama
 
-This directory contains build and deployment scripts for the PSP website.
+This directory contains deployment scripts for the PSP website built with Next.js.
 
-## Available Scripts
+## 📁 Files
 
-### `build-multilang.js`
+- `build-multilang.js` - Multi-language build script with SEO optimization
+- `deploy-dev.sh` - Deployment script for dev environment
+- `README.md` - This documentation file
 
-Multi-language build script that handles:
+## 🚀 Quick Start
 
-- Next.js static export build
-- Multi-language structure validation
-- SEO metadata optimization
-- Language-specific file copying
-- Certificate file copying
-- Sitemap and robots.txt validation
-
-#### Usage
+### Deploy to Development Environment
 
 ```bash
-# Run the multi-language build
+# Deploy to dev.phillippesuryapratama.com
+npm run deploy
+```
+
+### Manual Deployment Steps
+
+```bash
+# 1. Build with multi-language support
 npm run build:multilang
 
-# Or run directly
-node scripts/build-multilang.js
+# 2. Deploy to dev server
+npm run deploy:dev
 ```
 
-#### What it does
+### Local Testing
 
-1. **Build Process**: Runs `npm run build` to create static export
-2. **Structure Validation**: Checks for required language directories and files
-3. **File Copying**: Copies language-specific manifests and assets
-4. **SEO Validation**: Validates sitemap and robots.txt
-5. **Certificate Handling**: Copies certificate files to output directory
-6. **Build Summary**: Provides detailed build report
-
-#### Output
-
-The script generates a static export in the `./out` directory with:
-
-- `/en/` - English version (default)
-- `/id/` - Indonesian version
-- Multi-language sitemap with hreflang tags
-- Language-specific manifests
-- Certificate files
-- Optimized assets
-
-## Package.json Scripts
-
-```json
-{
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build:multilang": "node scripts/build-multilang.js",
-    "start": "next start",
-    "lint": "next lint",
-    "serve": "npx serve out",
-    "preview": "npm run build:multilang && npm run serve"
-  }
-}
+```bash
+# Build and serve locally
+npm run preview
 ```
 
-## Development Workflow
+## 🌐 Deployment Targets
 
-1. **Development**: `npm run dev`
-2. **Build**: `npm run build:multilang`
-3. **Preview**: `npm run preview`
-4. **Deploy**: Upload `./out` directory to server
+### Development Environment
 
-## Multi-Language Structure
+- **Domain**: `dev.phillippesuryapratama.com`
+- **Server**: `admin@147.139.191.16`
+- **Path**: `/var/www/dev.phillippesuryapratama.com`
 
+### Production Environment (Future)
+
+- **Domain**: `phillippesuryapratama.com`
+- **Server**: `admin@147.139.191.16`
+- **Path**: `/var/www/phillippesuryapratama.com`
+
+## 🔧 Features
+
+### Multi-language Support
+
+- English (default): `/`
+- Indonesian: `/id/`
+- Indonesian redirect: `/id`
+
+### SEO Optimization
+
+- Static export with proper metadata
+- Sitemap generation
+- Robots.txt configuration
+- Hreflang tags for multi-language
+- Open Graph and Twitter Cards
+
+### Performance Features
+
+- Static file caching (1 year)
+- Gzip compression
+- Brotli compression
+- Security headers
+- SSL with auto-renewal
+
+### Error Handling
+
+- Custom 404 page
+- Custom 500 page
+- Multilingual error messages
+
+## 📋 Prerequisites
+
+### Local Environment
+
+- Node.js 18+
+- npm or yarn
+- SSH access to server
+
+### Server Environment
+
+- Ubuntu 22.04 LTS
+- Nginx
+- Certbot (Let's Encrypt)
+- SSL certificates
+
+## 🔒 SSL Configuration
+
+The deployment script automatically:
+
+- Requests SSL certificate from Let's Encrypt
+- Configures auto-renewal
+- Sets up HTTPS redirects
+- Applies security headers
+
+## 📊 Monitoring
+
+After deployment, verify:
+
+1. Website accessibility: `https://dev.phillippesuryapratama.com`
+2. Indonesian version: `https://dev.phillippesuryapratama.com/id/`
+3. Error pages: `https://dev.phillippesuryapratama.com/404`
+4. SSL certificate: Check browser security indicator
+5. Performance: Google PageSpeed Insights
+
+## 🛠️ Troubleshooting
+
+### Build Issues
+
+```bash
+# Check Next.js configuration
+cat next.config.ts
+
+# Verify static export settings
+npm run build
+ls -la out/
 ```
-out/
-├── en/                 # English version
-│   ├── index.html
-│   └── ...
-├── id/                 # Indonesian version
-│   ├── index.html
-│   └── ...
-├── certificates/       # Certificate files
-├── sitemap.xml        # Multi-language sitemap
-├── robots.txt         # SEO robots file
-└── manifest.json      # PWA manifest
+
+### Deployment Issues
+
+```bash
+# Check server connectivity
+ssh admin@147.139.191.16
+
+# Verify nginx configuration
+ssh admin@147.139.191.16 "sudo nginx -t"
+
+# Check SSL certificate
+ssh admin@147.139.191.16 "sudo certbot certificates"
 ```
 
-## SEO Features
+### DNS Issues
 
-- Multi-language sitemap with hreflang tags
-- Language-specific metadata
-- Canonical URLs
-- Open Graph tags
-- Twitter Card support
-- Structured data ready
+```bash
+# Check DNS resolution
+nslookup dev.phillippesuryapratama.com
 
-## Troubleshooting
+# Test direct IP access
+curl -I http://147.139.191.16
+```
 
-### Build Fails
+## 📝 Notes
 
-- Ensure `next.config.ts` has `output: "export"`
-- Check that all required files exist
-- Verify TypeScript compilation
+- The deployment script is based on the NetPiu deployment configuration
+- All static files are served from `/var/www/dev.phillippesuryapratama.com`
+- SSL certificates are automatically renewed via systemd timer
+- Error pages include company branding and contact information
+- Multi-language support includes proper hreflang tags for SEO
 
-### Missing Language Files
+## 🔄 Updates
 
-- Check `src/app/[lang]/dictionaries/` directory
-- Ensure both `en.json` and `id.json` exist
-- Validate JSON syntax
+To update the deployment:
 
-### SEO Issues
+1. Make changes to the codebase
+2. Test locally with `npm run preview`
+3. Deploy with `npm run deploy`
+4. Verify deployment at the target URL
 
-- Verify sitemap.xml contains hreflang tags
-- Check robots.txt references sitemap
-- Validate metadata in browser dev tools
+## 📞 Support
+
+For deployment issues, check:
+
+- Server logs: `/var/log/nginx/dev.phillippesuryapratama.com.*.log`
+- SSL status: `sudo certbot certificates`
+- Nginx status: `sudo systemctl status nginx`

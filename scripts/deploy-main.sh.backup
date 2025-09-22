@@ -1,0 +1,286 @@
+#!/bin/bash
+
+# APW Official Website Deployment Script for Next.js - MAIN DOMAIN
+# Multi-language Support (English/Indonesian) with Performance & SEO Optimization
+# SSL Auto-Renewal, Dynamic Metadata, Hreflang Support
+# Usage: ./scripts/deploy-main.sh
+
+SERVER="admin@147.139.191.16"
+SERVER_PATH="/var/www/anugerahpancawisesa.com"
+DOMAIN="anugerahpancawisesa.com"
+
+echo "🚀 APW Official Website Deployment (Next.js + Multi-language) - MAIN DOMAIN"
+echo "=========================================================================="
+
+# Build the Next.js project with multi-language support
+echo "🔨 Building Next.js project with multi-language support..."
+node scripts/build-multilang.js
+
+if [ $? -ne 0 ]; then
+    echo "❌ Multi-language build failed! Please fix errors before deploying."
+    exit 1
+fi
+
+echo "✅ Multi-language build successful!"
+
+# Check if out directory exists (static export)
+if [ ! -d "out" ]; then
+    echo "❌ Static export failed! 'out' directory not found."
+    echo "💡 Make sure next.config.ts is configured for static export."
+    exit 1
+fi
+
+# Upload the built files
+echo "📤 Uploading static files to server..."
+scp -r out/ $SERVER:~/
+
+# Create server directory and setup files
+echo "📁 Setting up server directory..."
+ssh $SERVER "
+    # Create directory structure
+    sudo mkdir -p $SERVER_PATH
+    
+    # Copy static files
+    sudo cp -r ~/out/* $SERVER_PATH/
+    
+    # Set proper ownership
+    sudo chown -R www-data:www-data $SERVER_PATH/
+    sudo chmod -R 755 $SERVER_PATH/
+    
+    # Cleanup temp files
+    rm -rf ~/out
+"
+
+# Configure Nginx for APW main domain with maximum optimizations
+echo "⚙️  Configuring Nginx with maximum performance optimizations..."
+ssh $SERVER "
+    sudo tee /etc/nginx/sites-available/$DOMAIN > /dev/null << 'EOF'
+server {
+    listen 443 ssl http2;
+    listen [::]:443 ssl http2;
+    server_name $DOMAIN www.$DOMAIN;
+    
+    root $SERVER_PATH;
+    index index.html index.htm;
+    
+    # SSL Configuration
+    ssl_certificate /etc/letsencrypt/live/$DOMAIN/fullchain.pem;
+    ssl_certificate_key /etc/letsencrypt/live/$DOMAIN/privkey.pem;
+    include /etc/letsencrypt/options-ssl-nginx.conf;
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
+    
+    # SSL optimization (options-ssl-nginx.conf already includes all SSL settings)
+    # ssl_session_cache and ssl_session_timeout are included in options-ssl-nginx.conf
+    
+    # Security Headers
+    add_header X-Frame-Options \"SAMEORIGIN\" always;
+    add_header X-Content-Type-Options \"nosniff\" always;
+    add_header X-XSS-Protection \"1; mode=block\" always;
+    add_header Referrer-Policy \"strict-origin-when-cross-origin\" always;
+    add_header Strict-Transport-Security \"max-age=31536000; includeSubDomains; preload\" always;
+    add_header Content-Security-Policy \"default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self';\" always;
+    
+    # Rate Limiting
+    limit_req zone=general burst=20 nodelay;
+    limit_conn conn_limit_per_ip 10;
+    
+    # Static Files dengan Aggressive Caching
+    location ~* \.(js|css|png|jpg|jpeg|gif|ico|svg|woff|woff2|ttf|eot|webp|avif)$ {
+        expires 1y;
+        add_header Cache-Control \"public, immutable\";
+        add_header Vary \"Accept-Encoding\";
+        access_log off;
+        try_files \$uri =404;
+    }
+    
+    # Next.js Static Files
+    location /_next/static/ {
+        expires 1y;
+        add_header Cache-Control \"public, immutable\";
+        add_header Vary \"Accept-Encoding\";
+        access_log off;
+    }
+    
+    # Main Application
+    location / {
+        try_files \$uri \$uri.html \$uri/ /index.html;
+        
+        # Cache HTML files untuk 1 hour
+        location ~* \.html$ {
+            expires 1h;
+            add_header Cache-Control \"public, must-revalidate\";
+            add_header Vary \"Accept-Encoding, Accept-Language\";
+        }
+    }
+    
+    # Block Sensitive Files
+    location ~ /\. {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+    
+    # Block common attack patterns
+    location ~* /(wp-admin|wp-login|xmlrpc|admin|login) {
+        deny all;
+        access_log off;
+        log_not_found off;
+    }
+    
+    # Error Pages
+    error_page 404 /404.html;
+    error_page 500 502 503 504 /50x.html;
+    
+    # Logging
+    access_log /var/log/nginx/$DOMAIN.access.log combined;
+    error_log /var/log/nginx/$DOMAIN.error.log warn;
+}
+
+# HTTP to HTTPS Redirect
+server {
+    listen 80;
+    listen [::]:80;
+    server_name $DOMAIN www.$DOMAIN;
+    return 301 https://\$host\$request_uri;
+}
+EOF
+
+    # Backup existing configuration if it exists
+    if [ -f /etc/nginx/sites-enabled/$DOMAIN ]; then
+        sudo cp /etc/nginx/sites-enabled/$DOMAIN /etc/nginx/sites-enabled/$DOMAIN.backup.\$(date +%Y%m%d_%H%M%S)
+        echo '📋 Existing configuration backed up'
+    fi
+    
+    # Enable the site
+    sudo ln -sf /etc/nginx/sites-available/$DOMAIN /etc/nginx/sites-enabled/
+    
+    # Test Nginx configuration
+    echo '🧪 Testing Nginx configuration...'
+    if sudo nginx -t; then
+        echo '✅ Nginx configuration test passed'
+        sudo systemctl reload nginx
+        echo '✅ Nginx configuration updated and reloaded'
+    else
+        echo '❌ Nginx configuration test failed'
+        echo '🔄 Rolling back to previous configuration...'
+        if [ -f /etc/nginx/sites-enabled/$DOMAIN.backup.\$(date +%Y%m%d_%H%M%S) ]; then
+            sudo cp /etc/nginx/sites-enabled/$DOMAIN.backup.\$(date +%Y%m%d_%H%M%S) /etc/nginx/sites-enabled/$DOMAIN
+            sudo systemctl reload nginx
+            echo '✅ Rollback completed'
+        fi
+        echo '❌ Deployment failed due to Nginx configuration error'
+        exit 1
+    fi
+    
+    # Check if optimized nginx config exists and apply if needed
+    if [ ! -d /etc/nginx/backup ]; then
+        echo '⚠️  Optimized Nginx configuration not detected'
+        echo '💡 Run nginx-config/deploy-modular.sh from project root for better performance'
+    else
+        echo '✅ Optimized Nginx configuration detected'
+    fi
+"
+
+# Setup SSL with Let's Encrypt and Auto-Renewal
+echo "🔒 Setting up SSL certificate with auto-renewal..."
+ssh $SERVER "
+    # Install certbot if not already installed
+    sudo apt update -qq
+    sudo apt install -y certbot python3-certbot-nginx
+    
+    # Get SSL certificate
+    sudo certbot --nginx -d $DOMAIN -d www.$DOMAIN --non-interactive --agree-tos --email admin@$DOMAIN
+    
+    # Setup auto-renewal
+    sudo systemctl enable certbot.timer
+    sudo systemctl start certbot.timer
+    
+    echo '✅ SSL certificate installed with auto-renewal'
+"
+
+# Create SEO files if they don't exist
+echo "📄 Setting up SEO files..."
+ssh $SERVER "
+    # Create robots.txt if not exists
+    if [ ! -f $SERVER_PATH/robots.txt ]; then
+        sudo tee $SERVER_PATH/robots.txt > /dev/null << 'ROBOTS'
+User-agent: *
+Allow: /
+Sitemap: https://$DOMAIN/sitemap.xml
+ROBOTS
+        sudo chown www-data:www-data $SERVER_PATH/robots.txt
+        echo '✅ Robots.txt created'
+    fi
+    
+    # Create sitemap.xml if not exists
+    if [ ! -f $SERVER_PATH/sitemap.xml ]; then
+        sudo tee $SERVER_PATH/sitemap.xml > /dev/null << 'SITEMAP'
+<?xml version=\"1.0\" encoding=\"UTF-8\"?>
+<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">
+    <url>
+        <loc>https://$DOMAIN/</loc>
+        <lastmod>\$(date -I)</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://$DOMAIN/id/</loc>
+        <lastmod>\$(date -I)</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+    </url>
+</urlset>
+SITEMAP
+        sudo chown www-data:www-data $SERVER_PATH/sitemap.xml
+        echo '✅ Sitemap.xml created'
+    fi
+"
+
+# Verify deployment
+echo ""
+echo "🔍 Verifying deployment..."
+if ssh $SERVER "sudo systemctl is-active nginx" | grep -q "active"; then
+    echo "✅ Deployment successful!"
+    echo "🌐 Website: https://$DOMAIN"
+    echo "💡 Hard refresh if changes don't appear (Ctrl+F5)"
+    echo "📊 Nginx status: $(ssh $SERVER 'sudo systemctl status nginx --no-pager -l | head -3 | tail -1')"
+    
+    # Test website accessibility
+    echo ""
+    echo "🧪 Testing website accessibility..."
+    if curl -s -o /dev/null -w "Response Time: %{time_total}s, Status: %{http_code}\n" https://$DOMAIN; then
+        echo "✅ Website is accessible and responding"
+    else
+        echo "⚠️  Website may not be accessible yet (DNS propagation may take time)"
+    fi
+else
+    echo "❌ Deployment failed - nginx not running"
+    echo "🔧 Manual restart: ssh $SERVER && sudo systemctl restart nginx"
+fi
+
+echo ""
+echo "🎉 APW Main Domain Deployment Completed!"
+echo "======================================"
+echo "📋 Performance Features Enabled:"
+echo "   ✅ Static file caching (1 year)"
+echo "   ✅ Gzip compression"
+echo "   ✅ Security headers"
+echo "   ✅ SSL with auto-renewal"
+echo "   ✅ SEO optimization"
+echo "   ✅ Multi-language support (EN/ID)"
+echo "   ✅ Dynamic metadata"
+echo "   ✅ Hreflang tags"
+echo "   ✅ Error pages (404/500)"
+echo "   ✅ Rate limiting"
+echo ""
+echo "📋 Next Steps:"
+echo "   1. Test website: https://$DOMAIN"
+echo "   2. Test Indonesian version: https://$DOMAIN/id/"
+echo "   3. Test error pages: https://$DOMAIN/404, https://$DOMAIN/500"
+echo "   4. Monitor performance: Google PageSpeed Insights"
+echo "   5. Submit sitemap to Google Search Console"
+echo "   6. Verify hreflang tags in Google Search Console"
+echo "   7. Setup Google Analytics (optional)"
+echo ""
+echo "🔧 SSL Auto-Renewal Status:"
+ssh $SERVER "sudo certbot certificates | grep -A 5 $DOMAIN || echo 'Certificate information not available'"
