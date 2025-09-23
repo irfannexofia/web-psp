@@ -11,7 +11,7 @@
     "serve": "npx serve out",
     "preview": "npm run build:multilang && npm run serve",
     "deploy:dev": "./scripts/deploy-dev-simple.sh",
-    "deploy": "npm run build:multilang && npm run deploy:dev"
+    "deploy": "cd nginx-config && ./deploy-nginx.sh"
   },
   "dependencies": {
     "@frostui/tailwindcss": "^0.1.5",
