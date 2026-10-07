@@ -359,7 +359,7 @@ const Contact = ({ dictionary }: ContactProps) => {
           </div>
 
           {/* Contact Form */}
-          <div>
+          <div id="contact-form" tabIndex={-1} className="scroll-mt-24">
             <div className="bg-gray-50 rounded-2xl p-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-6">
                 {dictionary.contact.form.title}

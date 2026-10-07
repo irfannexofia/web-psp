@@ -25,6 +25,7 @@ interface Dictionary {
       description: string;
       features: string[];
     };
+
     features: string;
     inquireNow: string;
     howToPurchase: {
@@ -47,30 +48,7 @@ interface ProductsProps {
 
 const Products = ({ dictionary }: ProductsProps) => {
   const products = [
-    {
-      id: 1,
-      name: dictionary.products.starlet.name,
-      type: dictionary.products.starlet.type,
-      description: dictionary.products.starlet.description,
-      features: dictionary.products.starlet.features,
-      image: "/product-starlet.webp",
-    },
-    {
-      id: 2,
-      name: dictionary.products.geka.name,
-      type: dictionary.products.geka.type,
-      description: dictionary.products.geka.description,
-      features: dictionary.products.geka.features,
-      image: "/product-geka.webp",
-    },
-    {
-      id: 3,
-      name: dictionary.products.weldingAlloys.name,
-      type: dictionary.products.weldingAlloys.type,
-      description: dictionary.products.weldingAlloys.description,
-      features: dictionary.products.weldingAlloys.features,
-      image: "/product-welding-alloys.webp",
-    },
+    { id: 1, name: "Starlet", type: "Welding electrodes & wires", description: "Stable arc, neat bead, easy slag removal. Suitable for general fabrication & routine repairs.", features: ["Stable arc", "Neat bead", "Easy slag removal", "Suitable for general fabrication", "Routine repairs"], image: "https://phillippesuryapratama.com/product-starlet.webp" },
   ];
 
   return (
@@ -91,7 +69,7 @@ const Products = ({ dictionary }: ProductsProps) => {
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 mb-16">
           {products.map((product, index) => (
             <div
               key={product.id}
@@ -116,6 +94,7 @@ const Products = ({ dictionary }: ProductsProps) => {
                     alt={product.name}
                     width={300}
                     height={200}
+                    unoptimized
                     className="w-full h-48 object-cover rounded-lg"
                   />
                 </div>
@@ -156,7 +135,7 @@ const Products = ({ dictionary }: ProductsProps) => {
                 {/* CTA Button */}
                 <div className="text-center">
                   <a
-                    href="#contact"
+                    href={product.id === 1 ? "#contact-form" : "#contact"}
                     className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white ${
                       index === 0
                         ? "bg-gradient-to-r from-primary to-psp-orange"
@@ -244,6 +223,7 @@ const Products = ({ dictionary }: ProductsProps) => {
                   alt={product.name}
                   width={200}
                   height={150}
+                  unoptimized
                   className="w-full h-32 object-cover rounded-lg shadow-md group-hover:shadow-xl transition-all duration-300"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 rounded-lg flex items-center justify-center">

@@ -165,9 +165,9 @@
     "keyFeatures": "Fitur Utama"
   },
   "products": {
-    "title": "Produk (via APW)",
-    "subtitle": "Product Supply melalui PT. Anugerah Panca Wisesa (APW)",
-    "description": "Sebagai pendukung kelancaran operasi, PSP berkolaborasi dengan APW untuk menyediakan produk industri dari brand tepercaya.",
+    "title": "Produk Industri",
+    "subtitle": "Produk Las dan Peralatan Industri Berkualitas",
+    "description": "PSP menyediakan produk las dan peralatan industri dari brand tepercaya untuk mendukung kebutuhan operasional dan proyek Anda.",
     "starlet": {
       "name": "Starlet",
       "type": "Welding electrodes & wires",
@@ -208,13 +208,13 @@
     "inquireNow": "Inquire Now",
     "howToPurchase": {
       "title": "How to Purchase",
-      "description": "Semua inquiry diarahkan ke APW; tim PSP membantu rekomendasi teknis agar spesifikasi produk sesuai kebutuhan.",
+      "description": "Hubungi PSP untuk mendapatkan rekomendasi teknis dan memilih produk yang sesuai dengan kebutuhan Anda.",
       "getRecommendation": "Get Technical Recommendation",
-      "callDirectly": "Call APW Directly"
+      "callDirectly": "Hubungi Kami Langsung"
     },
     "gallery": {
       "title": "Product Gallery",
-      "description": "Kolase visual brand & produk yang didistribusikan melalui APW. Tunjukkan variasi produk consumables (electrodes, wires, rods), valves, dan welding machines.",
+      "description": "Lihat produk las dan peralatan industri yang kami sediakan untuk berbagai kebutuhan operasional dan proyek.",
       "moreProducts": "More Products"
     }
   },
@@ -427,7 +427,7 @@
           "options": {
             "welding": "Welding Service",
             "valve": "Valve Repair Service",
-            "products": "Products via APW",
+            "products": "Industrial Products",
             "consultation": "Consultation"
           }
         },
@@ -463,7 +463,7 @@
       "title": "Layanan",
       "welding": "Welding Service",
       "valve": "Valve Repair Service",
-      "products": "Products via APW",
+      "products": "Industrial Products",
       "consultation": "Technical Consultation"
     },
     "quickLinks": {
