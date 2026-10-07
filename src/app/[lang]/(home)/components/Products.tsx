@@ -28,6 +28,7 @@ interface Dictionary {
 
     features: string;
     inquireNow: string;
+    catalog: string;
     howToPurchase: {
       title: string;
       description: string;
@@ -133,9 +134,11 @@ const Products = ({ dictionary }: ProductsProps) => {
                 </div>
 
                 {/* CTA Button */}
-                <div className="text-center">
+                <div className="flex flex-col items-center gap-3 text-center">
                   <a
-                    href={product.id === 1 ? "#contact-form" : "#contact"}
+                    href="https://anugerahpancawisesa.com/en/#products"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className={`inline-flex items-center px-6 py-3 rounded-lg font-semibold text-white ${
                       index === 0
                         ? "bg-gradient-to-r from-primary to-psp-orange"
@@ -149,6 +152,15 @@ const Products = ({ dictionary }: ProductsProps) => {
                       className="w-4 h-4 mr-2"
                     />
                     {dictionary.products.inquireNow}
+                  </a>
+                  <a
+                    href="/KATALOG%20STARLET%202.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center px-6 py-3 rounded-lg border-2 border-primary text-primary font-semibold hover:bg-primary hover:text-white transition-all duration-300"
+                  >
+                    <IconifyIcon icon="lucide:book-open" className="w-4 h-4 mr-2" />
+                    {dictionary.products.catalog}
                   </a>
                 </div>
               </div>
