@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build:multilang": "node scripts/build-multilang.js",
+    "build:multilang": "npm run build",
     "start": "next start",
     "lint": "next lint",
     "serve": "npx serve out",
-    "preview": "npm run build:multilang && npm run serve",
+    "preview": "npm run build && npm run serve",
     "deploy:dev": "./scripts/deploy-dev-simple.sh",
     "deploy": "cd nginx-config && ./deploy-nginx.sh"
   },
