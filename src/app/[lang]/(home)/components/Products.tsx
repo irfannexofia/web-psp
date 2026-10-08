@@ -49,7 +49,7 @@ interface ProductsProps {
 
 const Products = ({ dictionary }: ProductsProps) => {
   const products = [
-    { id: 1, name: "Starlet", type: "Welding electrodes & wires", description: "Stable arc, neat bead, easy slag removal. Suitable for general fabrication & routine repairs.", features: ["Stable arc", "Neat bead", "Easy slag removal", "Suitable for general fabrication", "Routine repairs"], image: "https://phillippesuryapratama.com/product-starlet.webp" },
+    { id: 1, name: "Starlet", type: "Welding electrodes & wires", description: "Stable arc, neat bead, easy slag removal. Suitable for general fabrication & routine repairs.", features: ["Stable arc", "Neat bead", "Easy slag removal", "Suitable for general fabrication", "Routine repairs"], image: "/product-starlet.webp" },
   ];
 
   return (
